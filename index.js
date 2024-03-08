@@ -1,11 +1,9 @@
 const express = require('express')
 const app = express()
-
+const router = require('./routes/routes')
 const PORT = 3004
 
-app.get('/',(req,res) => {
-    res.send("Hi guys")
-})
+app.use('/api',router)
 
 app.listen(PORT,() => {
     console.log('Server is executed')
